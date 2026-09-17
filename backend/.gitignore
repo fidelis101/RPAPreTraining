@@ -1,0 +1,38 @@
+# --- Build output ----------------------------------------------------------
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+publish/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# --- Secrets ---------------------------------------------------------------
+# Real Orchestrator credentials live here; appsettings.json keeps placeholders.
+appsettings.Development.json
+appsettings.Local.json
+appsettings.Production.json
+
+# --- NuGet -----------------------------------------------------------------
+*.nupkg
+*.snupkg
+packages/
+!packages/build/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# --- Test / coverage -------------------------------------------------------
+[Tt]est[Rr]esult*/
+coverage*.json
+coverage*.xml
+*.coverage
+*.trx
+
+# --- Misc ------------------------------------------------------------------
+*.log
+.vs/

@@ -1,0 +1,91 @@
+:root {
+  --line: #e2e5ea;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --danger: #dc2626;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #111827;
+  background: #f7f8fa;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+h1 { font-size: 22px; margin: 0 0 24px; }
+h2 { font-size: 16px; margin: 0; }
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.row.between { justify-content: space-between; margin-top: 32px; }
+
+label { width: 70px; font-size: 14px; color: var(--muted); }
+
+select {
+  flex: 1;
+  min-width: 220px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  font-size: 14px;
+}
+
+button {
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:disabled { opacity: .5; cursor: not-allowed; }
+button.danger { background: var(--danger); }
+button.ghost { background: transparent; color: var(--accent); border: 1px solid var(--line); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+th { background: #f3f4f6; font-weight: 600; font-size: 12px; text-transform: uppercase; color: var(--muted); }
+tr:last-child td { border-bottom: 0; }
+
+.muted { color: var(--muted); }
+
+.state { padding: 2px 8px; border-radius: 999px; font-size: 12px; background: #e5e7eb; }
+.state.running, .state.pending { background: #dbeafe; color: #1d4ed8; }
+.state.successful { background: #dcfce7; color: #15803d; }
+.state.faulted, .state.stopped { background: #fee2e2; color: #b91c1c; }
+
+.error {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}

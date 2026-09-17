@@ -1,0 +1,16 @@
+# --- OS / editor -----------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vs/
+.vscode/
+.idea/
+*.swp
+*~
+
+# --- Secrets ---------------------------------------------------------------
+# Never commit real Orchestrator credentials.
+*.env
+.env.*
+!.env.example
+secrets.json

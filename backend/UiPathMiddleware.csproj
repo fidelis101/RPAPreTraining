@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>UiPathMiddleware</RootNamespace>
+    <!-- Feeds the XML doc comments into the OpenAPI document. -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- OpenAPI document generator (first-party, ships with .NET 10). -->
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0" />
+    <!-- Swagger UI page only; the document above is what it renders. -->
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="9.*" />
+  </ItemGroup>
+
+</Project>
