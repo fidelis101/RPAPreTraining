@@ -7,7 +7,7 @@ export default defineConfig({
     port: 5173,
     // Everything under /api is forwarded to the .NET middleware.
     proxy: {
-      '/api': 'http://localhost:5080'
+      '/api': 'https://rpatrainingbackend-gxehfbapdkh8bzes.westus3-01.azurewebsites.net'
     }
   }
 })
